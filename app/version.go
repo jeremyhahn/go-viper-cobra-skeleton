@@ -1,24 +1,39 @@
 package app
 
 var (
-	Release, BuildDate, BuildUser, GitTag, GitHash, Image string
+	Name,
+	Repository,
+	Package,
+	Version,
+	BuildDate,
+	BuildUser,
+	GitBranch,
+	GitTag,
+	GitHash,
+	Image string
 )
 
 type AppVersion struct {
-	Release   string `json:"release"`
-	BuildDate string `json:"buildDate"`
-	BuildUser string `json:"buildUser"`
-	GitTag    string `json:"gitTag"`
-	GitHash   string `json:"gitHash"`
-	Image     string `json:"image"`
+	Name       string `json:"name"`
+	Repository string `json:"repository"`
+	Package    string `json:"package"`
+	Version    string `json:"version"`
+	GitBranch  string `json:"gitBranch"`
+	GitTag     string `json:"gitTag"`
+	GitHash    string `json:"gitHash"`
+	BuildDate  string `json:"buildDate"`
+	BuildUser  string `json:"buildUser"`
 }
 
 func GetVersion() *AppVersion {
 	return &AppVersion{
-		Release:   Release,
-		BuildDate: BuildDate,
-		BuildUser: BuildUser,
-		GitTag:    GitTag,
-		GitHash:   GitHash,
-		Image:     Image}
+		Name:       Name,
+		Repository: Repository,
+		Package:    Package,
+		Version:    Version,
+		GitBranch:  GitBranch,
+		GitTag:     GitTag,
+		GitHash:    GitHash,
+		BuildDate:  BuildDate,
+		BuildUser:  BuildUser}
 }

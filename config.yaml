@@ -1,7 +1,6 @@
 # Configuration file
 
 # debug: 
-# datadir:
-# homedir:
-# logdir: 
-# logfile: 
+# config-dir: 
+# data-dir:
+# log-dir: 
