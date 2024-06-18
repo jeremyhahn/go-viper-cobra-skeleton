@@ -4,6 +4,7 @@ This is a Golang CLI skeleton project that clones itself to provide initial boil
 
 The generated project will accept its configuration from CLI arguments or any source supported by Viper.
 
+
 # Build
 
 This project includes a `Makefile` with targets to build the following architectures:
@@ -16,7 +17,7 @@ This project includes a `Makefile` with targets to build the following architect
 
 # Usage
 
-Use the `clone` target to create a new project:
+The following `clone` command results in a new directory being created one level up `../my-new-app` that contains the files included in this skeleton project, with import statements using `bitbucket.org/myorg/my-new-app`
 
     # Create new project
     CLONE_HOST=bitbucket.org CLONE_OWNER=myorg CLONE_APP_NAME=my-new-app make clone
@@ -26,10 +27,22 @@ Use the `clone` target to create a new project:
     make
     ./my-new-app version --debug
 
-    # That's it, get to work!
-
-The following command results in a new directory being created one level up `../my-new-app` that contains the files included in this skeleton project, with import statements using `bitbucket.org/myorg/my-new-app`
-
+    # Result:
+    Starting logger in debug mode...
+    config-dir: /etc/my-new-app
+    data-dir: /home/jhahn/sources/go-my-new-app/db
+    debug: true
+    home: /home/jhahn/sources/go-my-new-app
+    log-dir: ./logs
+    Name:			my-new-app
+    Version:		0.0.0-alpha.1
+    Repository:		github.com
+    Package:		go-my-new-app
+    Git Branch:		master
+    Git Tag:		
+    Git Hash:		c09670bbeaba23ac0d955286d0b4829d66c5f8dd
+    Build User:		jhahn
+    Build Date:		2024-06-17_19:58:48
 
 # Generated Skeleton Project
 
